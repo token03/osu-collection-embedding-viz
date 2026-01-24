@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "bun run server.ts",
-    "build": "bun build ./src/index.ts --outdir=dist --minify && cp index.html dist/ && cp style.css dist/ && cp -r viz_data dist/",
-    "preview": "cd dist && python3 -m http.server 8000"
+    "build": "bun build ./src/index.ts --outdir=docs --minify && cp index.html docs/ && cp style.css docs/ && cp -r viz_data docs/",
+    "preview": "cd docs && python3 -m http.server 8000"
   },
   "devDependencies": {
     "@types/bun": "latest",
