@@ -78,7 +78,7 @@ async function initDuckDB() {
 }
 
 async function loadParquetWithDuckDB(filename: string, query: string) {
-    const response = await fetch(`/viz_data/${filename}`);
+    const response = await fetch(`./viz_data/${filename}`);
     if (!response.ok) throw new Error(`Failed to load ${filename}`);
     const buffer = await response.arrayBuffer();
     
