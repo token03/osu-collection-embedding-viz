@@ -430,8 +430,9 @@ const beatmapItemTemplate = (idx: number, similarity?: number) => {
     return html`
         <div class="neighbor-item" @click=${() => selectBeatmap(idx)}>
             <div class="neighbor-title">
-                <span class="neighbor-title-text" title="${globalData.titles[idx] as string}">${globalData.titles[idx]}</span>
-                <a class="mini-external-link" href="${externalUrl}" target="_blank" @click=${(e: Event) => e.stopPropagation()} title="Open in osu!">↗</a>
+                <a class="neighbor-title-link" href="${externalUrl}" target="_blank" @click=${(e: Event) => e.stopPropagation()} title="Open in osu!">
+                    <span class="neighbor-title-text" title="${globalData.titles[idx] as string}">${globalData.titles[idx]}</span>
+                </a>
                 <span class="neighbor-title-diff" title="${globalData.diffs[idx] as string}">${globalData.diffs[idx]}</span>
             </div>
             <div class="neighbor-sub">
